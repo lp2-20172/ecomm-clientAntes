@@ -137,11 +137,9 @@ D:\dev\LP2-20172\ecomm-client>git branch -a
 
 ### `Importante`: 
 1. Tampoco es necesario subir la rama `gh-pages` (`git push origin gh-pages`), al hacer deploy ya lo hizo. Repito, no lo traiga, no es necesario.
-2. Si ha realizado cambios en el código fuente y quiere mirar los cambios en el https://lp2-20172.github.io/ecomm-client debe elimiar la cache del browser o volver a cargar de manera forzada. 
+2. Si ha realizado cambios en el código fuente y quiere mirar los cambios en el https://lp2-20172.github.io/ecomm-client debe vaciar la cache del browser o volver a cargar de manera forzada. 
 
-Para `chrome` click derecho dentro de la página, luego `Inspeccionar`.
-Elija la pestaña `Network`, click derecho sobre el o los archivos minificados js de la forma   `.../main.61b95995.js` > click sobre `Clear browser cache`
-O click derecho sobre el ícono de `Refresh` > click sobre `Volver a cargar de manera forzada`
+Para `chrome` click derecho sobre el ícono de `Refresh` > click sobre `Vaciar caché y volver a cargar de manera forzada`
 
 
 
