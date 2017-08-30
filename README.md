@@ -1,5 +1,30 @@
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
+# rama `master`
+Esta rama queda como está solo se modificó este archivo README.md, esta sección.
+
+## Clonar, instalar y ejecutar en el ambiente local
+
+Clonar e ingresar al root del proyecto, por ejemplo:
+
+```sh
+D:\dev\LP2-20172>git clone https://github.com/lp2-20172/ecomm-client.git
+D:\dev\LP2-20172>cd ecomm-client
+D:\dev\LP2-20172\ecomm-client>
+```
+
+Instalar dependencias:
+
+```sh
+...\ecomm-client>npm install
+```
+
+Run:
+
+```sh
+...\ecomm-client>npm start
+```
+
 Below you will find some information on how to perform common tasks.<br>
 You can find the most recent version of this guide [here](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md).
 
