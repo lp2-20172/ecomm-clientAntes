@@ -141,8 +141,34 @@ D:\dev\LP2-20172\ecomm-client>git branch -a
 
 Para `chrome` click derecho sobre el ícono de `Refresh` > click sobre `Vaciar caché y volver a cargar de manera forzada`
 
+## Para renombrar una rama en el repositorio remoto
 
+1ro renombrar en el local:
+```sh
+D:\dev\LP2-20172\ecomm-client>git branch -m r01-deploy r02-deploy
 
+D:\dev\LP2-20172\ecomm-client>git branch
+  master
+* r02-deploy
+```
+2do ahora en el remmoto
+```sh
+D:\dev\LP2-20172\ecomm-client>git push -u origin :r01-deploy r02-deploy
+Total 0 (delta 0), reused 0 (delta 0)
+To https://github.com/lp2-20172/ecomm-client.git
+ - [deleted]         r01-deploy
+ * [new branch]      r02-deploy -> r02-deploy
+Branch r02-deploy set up to track remote branch r02-deploy from origin.
+
+D:\dev\LP2-20172\ecomm-client>git branch -a
+  master
+* r02-deploy
+  remotes/origin/HEAD -> origin/master
+  remotes/origin/master
+  remotes/origin/r02-deploy
+
+D:\dev\LP2-20172\ecomm-client>
+```
 
 
 
