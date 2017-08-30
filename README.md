@@ -68,7 +68,7 @@ Branch r02-deploy set up to track remote branch r02-deploy from origin.
 D:\dev\LP2-20172\ecomm-client>
 D:\dev\LP2-20172\ecomm-client>git branch -a
   master
-* r01-deploy
+* r02-deploy
   remotes/origin/HEAD -> origin/master
   remotes/origin/master
 ```
@@ -129,7 +129,7 @@ No es necesario traer la rama `gh-pages` que se creó en el repositorio remoto a
 ```sh
 D:\dev\LP2-20172\ecomm-client>git branch -a
   master
-* r01-deploy
+* r02-deploy
   remotes/origin/HEAD -> origin/master
   remotes/origin/master
 
