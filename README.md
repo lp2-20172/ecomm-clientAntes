@@ -1,57 +1,52 @@
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
-# rama `r03-react`
-El objetivo de esta rama es de hacer un binding de los datos en dos direcciones
+# rama `r04-router4`
+El objetivo de esta rama es trabajar con router4
+se tomó como base del branch la rama `r03-react`
 
-## Configurar y deployar en el ambiente remoto github.io
+## Configurar
 
 En `package.json`, se mantiene igual :
 
 ```diff
-    {
-      "name": "ecomm-client",
-      "version": "0.1.0",
-      "private": true,
-      "homepage": "https://lp2-20172.github.io/ecomm-client",
-      "dependencies": {
-        "react": "^15.6.1",
-        "react-dom": "^15.6.1"
-      },
-      "devDependencies": {
-        "gh-pages": "^1.0.0",
-        "react-scripts": "1.0.12"
-      },
-      "scripts": {
-        "start": "react-scripts start",
-        "build": "react-scripts build",
-        "test": "react-scripts test --env=jsdom",
-        "eject": "react-scripts eject",
-        "predeploy": "npm run build",
-        "deploy": "gh-pages -d build"
-      }
-    }     
-```
-Por si su repo local esta desactualizado, traer la rama del remoto:
-```sh
-D:\dev\LP2-20172\ecomm-client>git pull origin r03-react
-From https://github.com/lp2-20172/ecomm-client
- * branch            r03-react  -> FETCH_HEAD
-Already up-to-date.
-
-D:\dev\LP2-20172\ecomm-client>
-
+{
+  "name": "ecomm-client",
+  "version": "0.1.0",
+  "private": true,
+  "homepage": "https://lp2-20172.github.io/ecomm-client",
+  "dependencies": {
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
++   "react-router": "^4.2.0",
++   "react-router-dom": "^4.2.2"
+  },
+  "devDependencies": {
+    "gh-pages": "^1.0.0",
+    "react-scripts": "1.0.12"
+  },
+  "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}
+   
 ```
 
-moverse o cambiar de rama (branch): `$ git checkout <<nombre-rama>>`
+
+moverse o cambiar de rama (branch):
 ```sh
-D:\dev\LP2-20172\ecomm-client>git checkout r03-react
+D:\dev\LP2-20172\ecomm-client>git checkout r04-router4
 
 ```
 
 
-Sin nuevas dependencias:
+Instalar dependencias:
 ```sh
-
+D:\dev\LP2-20172\ecomm-client>npm install
 
 ```
 
