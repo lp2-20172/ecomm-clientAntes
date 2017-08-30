@@ -31,7 +31,7 @@ En `package.json`, se mantiene igual :
       }
     }     
 ```
-Por si su repo local esta desactualizado, traer todas la rama del remoto:
+Por si su repo local esta desactualizado, traer la rama del remoto:
 ```sh
 D:\dev\LP2-20172\ecomm-client>git pull origin r03-react
 From https://github.com/lp2-20172/ecomm-client
