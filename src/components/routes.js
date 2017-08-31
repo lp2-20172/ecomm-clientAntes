@@ -2,6 +2,7 @@ import React from 'react'
 import About from './About';
 import Home from './Home';
 import Counter from './Counter';
+import User from './User';
 
 const routes = [
     {
@@ -24,7 +25,13 @@ const routes = [
         path: '/counters',
         sidebar: () => <div>Counter!</div>,
         main: Counter
+    },
+    {
+        path: '/users',
+        sidebar: () => <div>User!</div>,
+        main: User
     }
+    
 ]
 
 export default routes
