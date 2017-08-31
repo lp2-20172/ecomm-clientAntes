@@ -27,6 +27,7 @@ class MainLayout extends Component {
                             <li><NavLink exact to="/" activeClassName="selected">Home</NavLink></li>
                             <li><NavLink exact to="/abouts" activeClassName="selected">abouts</NavLink></li>
                             <li><NavLink exact to="/one" activeClassName="selected">one</NavLink></li>
+                            <li><NavLink exact to="/counters" activeClassName="selected">Counter</NavLink></li>
                         </ul>
                         <OldSchoolMenuLink activeOnlyWhenExact={true} to="/" label="Home" />
                         <OldSchoolMenuLink to="/abouts" label="About" />

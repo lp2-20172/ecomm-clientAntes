@@ -1,12 +1,12 @@
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
-# rama `r04-router4`
-El objetivo de esta rama es trabajar con router4
-se tomó como base del branch la rama `r03-react`
+# rama `r05-redux`
+El objetivo de esta rama es trabajar con redux
+se tomó como base del branch la rama `r04-router4`
 
 ## Configurar
 
-En `package.json`, se mantiene igual :
+En `package.json`, se agregó dos librerías en dependencies :
 
 ```diff
 {
@@ -17,8 +17,10 @@ En `package.json`, se mantiene igual :
   "dependencies": {
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
-+   "react-router": "^4.2.0",
-+   "react-router-dom": "^4.2.2"
++   "react-redux": "^5.0.6",
+    "react-router": "^4.2.0",
+    "react-router-dom": "^4.2.2",
++   "redux": "^3.7.2"
   },
   "devDependencies": {
     "gh-pages": "^1.0.0",
@@ -39,7 +41,7 @@ En `package.json`, se mantiene igual :
 
 moverse o cambiar de rama (branch):
 ```sh
-D:\dev\LP2-20172\ecomm-client>git checkout r04-router4
+D:\dev\LP2-20172\ecomm-client>git checkout r05-redux
 
 ```
 
@@ -50,7 +52,14 @@ D:\dev\LP2-20172\ecomm-client>npm install
 
 ```
 
-## Run deploy:
+
+Run:
+```sh
+D:\dev\LP2-20172\ecomm-client>npm start
+
+```
+
+## Run deploy (optional):
 
 ```sh
 D:\dev\LP2-20172\ecomm-client>npm run deploy

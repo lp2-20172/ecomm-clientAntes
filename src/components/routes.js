@@ -1,6 +1,7 @@
 import React from 'react'
 import About from './About';
 import Home from './Home';
+import Counter from './Counter';
 
 const routes = [
     {
@@ -18,6 +19,11 @@ const routes = [
         path: '/one',
         sidebar: () => <div>one!</div>,
         main: () => <h2>One</h2>
+    },
+    {
+        path: '/counters',
+        sidebar: () => <div>Counter!</div>,
+        main: Counter
     }
 ]
 
