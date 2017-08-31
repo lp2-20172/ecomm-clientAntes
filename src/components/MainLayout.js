@@ -15,7 +15,7 @@ class MainLayout extends Component {
     render() {
         return (
 
-            <Router>
+            
                 <div style={{ display: 'flex' }}>
                     <div style={{
                         padding: '10px',
@@ -58,7 +58,7 @@ class MainLayout extends Component {
                         </Switch>
                     </div>
                 </div>
-            </Router>
+           
         )
     }
 }
