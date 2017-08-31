@@ -3,11 +3,13 @@ import {
     BrowserRouter as Router,
     Switch,
     Route,
-    Link
+    Link,
+    NavLink
 
 } from 'react-router-dom'
 import routes from './routes'
 
+import '../App.css';
 
 class MainLayout extends Component {
     render() {
@@ -22,8 +24,9 @@ class MainLayout extends Component {
                         background: '#f0f0f0'
                     }}>
                         <ul style={{ listStyleType: 'none', padding: 0 }}>
-                            <li><Link to="/">Home</Link></li>
-                            <li><Link to="/abouts">abouts</Link></li>
+                            <li><NavLink exact to="/" activeClassName="selected">Home</NavLink></li>
+                            <li><NavLink exact to="/abouts" activeClassName="selected">abouts</NavLink></li>
+                            <li><NavLink exact to="/one" activeClassName="selected">one</NavLink></li>
                         </ul>
                         <OldSchoolMenuLink activeOnlyWhenExact={true} to="/" label="Home" />
                         <OldSchoolMenuLink to="/abouts" label="About" />
