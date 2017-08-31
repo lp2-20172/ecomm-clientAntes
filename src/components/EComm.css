@@ -1,0 +1,6 @@
+div.layout {
+    display: flex
+}
+div.products {
+    flex: 1; padding: '10px'
+}

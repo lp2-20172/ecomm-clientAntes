@@ -1,8 +1,8 @@
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
-# rama `r07-ecomm`
-El objetivo de esta rama es trabajar un carrito de compras
-se tomó como base del branch la rama `r06-axios`
+# rama `r08-CSS`
+El objetivo de esta rama es trabajar con hojas de estilos
+se tomó como base del branch la rama `r07-ecomm`
 
 ## Configurar
 
@@ -43,7 +43,7 @@ En `package.json`, se mantiene :
 
 moverse o cambiar de rama (branch):
 ```sh
-D:\dev\LP2-20172\ecomm-client>git checkout r07-ecomm
+D:\dev\LP2-20172\ecomm-client>git checkout r08-css
 
 ```
 
