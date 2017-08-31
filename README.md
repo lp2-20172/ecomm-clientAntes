@@ -1,12 +1,12 @@
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
-# rama `r06-axios`
-El objetivo de esta rama es trabajar con redux, axios y redux-thunk
-se tomó como base del branch la rama `r05-redux`
+# rama `r07-ecomm`
+El objetivo de esta rama es trabajar un carrito de compras
+se tomó como base del branch la rama `r06-axios`
 
 ## Configurar
 
-En `package.json`, se agregó dos librerías en dependencies :
+En `package.json`, se mantiene :
 
 ```diff
 {
@@ -15,14 +15,14 @@ En `package.json`, se agregó dos librerías en dependencies :
   "private": true,
   "homepage": "https://lp2-20172.github.io/ecomm-client",
   "dependencies": {
-+   "axios": "^0.16.2",
+    "axios": "^0.16.2",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "react-redux": "^5.0.6",
     "react-router": "^4.2.0",
     "react-router-dom": "^4.2.2",
     "redux": "^3.7.2",
-+   "redux-thunk": "^2.2.0"
+    "redux-thunk": "^2.2.0"
   },
   "devDependencies": {
     "gh-pages": "^1.0.0",
@@ -43,7 +43,7 @@ En `package.json`, se agregó dos librerías en dependencies :
 
 moverse o cambiar de rama (branch):
 ```sh
-D:\dev\LP2-20172\ecomm-client>git checkout r06-axios
+D:\dev\LP2-20172\ecomm-client>git checkout r07-ecomm
 
 ```
 
