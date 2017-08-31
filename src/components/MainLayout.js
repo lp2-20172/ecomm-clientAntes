@@ -1,51 +1,166 @@
-import React, { Component } from 'react'
+/* eslint-disable flowtype/require-valid-file-annotation */
+
+import React from 'react';
+import PropTypes from 'prop-types';
+import { withStyles } from 'material-ui/styles';
+import classNames from 'classnames';
+import Drawer from 'material-ui/Drawer';
+import AppBar from 'material-ui/AppBar';
+import Toolbar from 'material-ui/Toolbar';
+import List from 'material-ui/List';
+import Typography from 'material-ui/Typography';
+import Divider from 'material-ui/Divider';
+import IconButton from 'material-ui/IconButton';
+import MenuIcon from 'material-ui-icons/Menu';
+import ChevronLeftIcon from 'material-ui-icons/ChevronLeft';
+import { mailFolderListItems, otherMailFolderListItems } from './menu/tileData';
+
+
 import {
     Switch,
-    Route,
-    Link,
-    NavLink
-
+    Route
 } from 'react-router-dom'
 import routes from './routes'
-
 import '../App.css';
 
-class MainLayout extends Component {
+const drawerWidth = 240;
+
+const styles = theme => ({
+    root: {
+        width: '100%',
+        height: '100%',
+        marginTop: theme.spacing.unit * 0,
+        zIndex: 1,
+        overflow: 'hidden',
+    },
+    appFrame: {
+        position: 'relative',
+        display: 'flex',
+        width: '100%',
+        height: '100%',
+    },
+    appBar: {
+        position: 'absolute',
+        transition: theme.transitions.create(['margin', 'width'], {
+            easing: theme.transitions.easing.sharp,
+            duration: theme.transitions.duration.leavingScreen,
+        }),
+    },
+    appBarShift: {
+        marginLeft: drawerWidth,
+        width: `calc(100% - ${drawerWidth}px)`,
+        transition: theme.transitions.create(['margin', 'width'], {
+            easing: theme.transitions.easing.easeOut,
+            duration: theme.transitions.duration.enteringScreen,
+        }),
+    },
+    menuButton: {
+        marginLeft: 12,
+        marginRight: 20,
+    },
+    hide: {
+        display: 'none',
+    },
+    drawerPaper: {
+        position: 'relative',
+        height: 'auto',
+        width: drawerWidth,
+    },
+    drawerHeader: {
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'flex-end',
+        padding: '0 8px',
+        height: 56,
+        [theme.breakpoints.up('sm')]: {
+            height: 64,
+        },
+    },
+    content: {
+        width: '100%',
+        marginLeft: -drawerWidth,
+        flexGrow: 1,
+        backgroundColor: theme.palette.background.default,
+        padding: theme.spacing.unit * 3,
+        transition: theme.transitions.create('margin', {
+            easing: theme.transitions.easing.sharp,
+            duration: theme.transitions.duration.leavingScreen,
+        }),
+        height: 'calc(100% - 56px)',
+        marginTop: 56,
+        [theme.breakpoints.up('sm')]: {
+            content: {
+                height: 'calc(100% - 64px)',
+                marginTop: 64,
+            },
+        },
+    },
+    contentShift: {
+        marginLeft: 0,
+        transition: theme.transitions.create('margin', {
+            easing: theme.transitions.easing.easeOut,
+            duration: theme.transitions.duration.enteringScreen,
+        }),
+    },
+});
+
+class PersistentDrawer extends React.Component {
+    state = {
+        open: false,
+    };
+
+    handleDrawerOpen = () => {
+        this.setState({ open: true });
+    };
+
+    handleDrawerClose = () => {
+        this.setState({ open: false });
+    };
+
     render() {
+        const { classes } = this.props;
+
         return (
-
-            
-                <div style={{ display: 'flex' }}>
-                    <div style={{
-                        padding: '10px',
-                        height: '100%',
-                        width: '20%',
-                        background: '#f0f0f0'
-                    }}>
-                        <ul style={{ listStyleType: 'none', padding: 0 }}>
-                            <li><NavLink exact to="/" activeClassName="selected">Home</NavLink></li>
-                            <li><NavLink exact to="/abouts" activeClassName="selected">abouts</NavLink></li>
-                            <li><NavLink exact to="/one" activeClassName="selected">one</NavLink></li>
-                            <li><NavLink exact to="/counters" activeClassName="selected">Counter</NavLink></li>
-                            <li><NavLink exact to="/users" activeClassName="selected">users</NavLink></li>
-                            <li><NavLink exact to="/ecomms" activeClassName="selected">ecomms</NavLink></li>
-                        </ul>
-                        <OldSchoolMenuLink activeOnlyWhenExact={true} to="/" label="Home" />
-                        <OldSchoolMenuLink to="/abouts" label="About" />
-                        <OldSchoolMenuLink to="/one" label="one" />
-                        <OldSchoolMenuLink to="/two" label="two" />
-
-                        {routes.map((route, index) => (
-                            <Route
-                                key={index}
-                                path={route.path}
-                                exact={route.exact}
-                                component={route.sidebar}
-                            />
-                        ))}
-                    </div>
-
-                    <div style={{ flex: 1, padding: '10px' }}>
+            <div className={classes.root}>
+                <div className={classes.appFrame}>
+                    <AppBar className={classNames(classes.appBar, this.state.open && classes.appBarShift)}>
+                        <Toolbar disableGutters={!this.state.open}>
+                            <IconButton
+                                color="contrast"
+                                aria-label="open drawer"
+                                onClick={this.handleDrawerOpen}
+                                className={classNames(classes.menuButton, this.state.open && classes.hide)}
+                            >
+                                <MenuIcon />
+                            </IconButton>
+                            <Typography type="title" color="inherit" noWrap>
+                                Persistent drawer
+              </Typography>
+                        </Toolbar>
+                    </AppBar>
+                    <Drawer
+                        type="persistent"
+                        classes={{
+                            paper: classes.drawerPaper,
+                        }}
+                        open={this.state.open}
+                    >
+                        <div className={classes.drawerInner}>
+                            <div className={classes.drawerHeader}>
+                                <IconButton onClick={this.handleDrawerClose}>
+                                    <ChevronLeftIcon />
+                                </IconButton>
+                            </div>
+                            <Divider />
+                            <List className={classes.list}>{mailFolderListItems}</List>
+                            <Divider />
+                            <List className={classes.list}>{otherMailFolderListItems}</List>
+                        </div>
+                    </Drawer>
+                    <main className={classNames(classes.content, this.state.open && classes.contentShift)}>
+                        <Typography type="body1" noWrap>
+                            {'You think water moves fast? You should see ice.'}
+                        </Typography>
 
                         <Switch>
                             {routes.map((route, index) => (
@@ -58,24 +173,20 @@ class MainLayout extends Component {
                             ))}
                             <Route component={NoMatch} />
                         </Switch>
-                    </div>
+
+                    </main>
                 </div>
-           
-        )
+            </div>
+        );
     }
 }
 
-export default MainLayout;
+PersistentDrawer.propTypes = {
+    classes: PropTypes.object.isRequired,
+};
 
+export default withStyles(styles)(PersistentDrawer);
 
-
-const OldSchoolMenuLink = ({ label, to, activeOnlyWhenExact }) => (
-    <Route path={to} exact={activeOnlyWhenExact} children={({ match }) => (
-        <div className={match ? 'active' : ''}>
-            {match ? '> ' : ''}<Link to={to}>{label}</Link>
-        </div>
-    )} />
-)
 
 const NoMatch = ({ location }) => (
     <div>
