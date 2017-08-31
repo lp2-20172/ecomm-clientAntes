@@ -1,12 +1,12 @@
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
-# rama `r07-ecomm`
-El objetivo de esta rama es trabajar un carrito de compras
-se tomó como base del branch la rama `r06-axios`
+# rama `r09-material-ui`
+El objetivo de esta rama es integrar material-ui
+se tomó como base del branch la rama `r07-ecomm`
 
 ## Configurar
 
-En `package.json`, se mantiene :
+En `package.json`, se agregaron dependencies :
 
 ```diff
 {
@@ -16,6 +16,8 @@ En `package.json`, se mantiene :
   "homepage": "https://lp2-20172.github.io/ecomm-client",
   "dependencies": {
     "axios": "^0.16.2",
++   "material-ui": "^1.0.0-beta.7",
++   "material-ui-icons": "^1.0.0-beta.5",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "react-redux": "^5.0.6",
@@ -43,7 +45,7 @@ En `package.json`, se mantiene :
 
 moverse o cambiar de rama (branch):
 ```sh
-D:\dev\LP2-20172\ecomm-client>git checkout r07-ecomm
+D:\dev\LP2-20172\ecomm-client>git checkout r09-material-ui
 
 ```
 
