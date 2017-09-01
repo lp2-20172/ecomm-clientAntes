@@ -1,8 +1,8 @@
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
-# rama `r10-template`
+# rama `r10-template2`
 El objetivo de esta rama es mejorar el diseño web con material-ui
-se tomó como base del branch la rama `09-material-ui`
+se tomó como base del branch la rama `r10-template`
 
 ## Configurar
 
