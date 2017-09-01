@@ -1,12 +1,12 @@
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
-# rama `r09-material-ui`
-El objetivo de esta rama es integrar material-ui
-se tomó como base del branch la rama `r07-ecomm`
+# rama `r10-template`
+El objetivo de esta rama es mejorar el diseño web con material-ui
+se tomó como base del branch la rama `09-material-ui`
 
 ## Configurar
 
-En `package.json`, se agregaron dependencies :
+En `package.json`, se mantiene :
 
 ```diff
 {
@@ -16,8 +16,8 @@ En `package.json`, se agregaron dependencies :
   "homepage": "https://lp2-20172.github.io/ecomm-client",
   "dependencies": {
     "axios": "^0.16.2",
-+   "material-ui": "^1.0.0-beta.7",
-+   "material-ui-icons": "^1.0.0-beta.5",
+    "material-ui": "^1.0.0-beta.7",
+    "material-ui-icons": "^1.0.0-beta.5",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "react-redux": "^5.0.6",
@@ -45,14 +45,13 @@ En `package.json`, se agregaron dependencies :
 
 moverse o cambiar de rama (branch):
 ```sh
-D:\dev\LP2-20172\ecomm-client>git checkout r09-material-ui
+D:\dev\LP2-20172\ecomm-client>git checkout r10-template
 
 ```
 
 
-Instalar dependencias:
+Sin nuevas dependencias:
 ```sh
-D:\dev\LP2-20172\ecomm-client>npm install
 
 ```
 
@@ -63,18 +62,6 @@ D:\dev\LP2-20172\ecomm-client>npm start
 
 ```
 
-## Run deploy (optional):
-
-```sh
-D:\dev\LP2-20172\ecomm-client>npm run deploy
-....
-
-Published
-
-D:\dev\LP2-20172\ecomm-client>
-
-
-```
 
 
 
