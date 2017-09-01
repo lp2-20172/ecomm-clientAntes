@@ -51,7 +51,9 @@ class User extends Component {
                         margin="normal"
                     />
 
-                    <Paper>
+                    <Paper style={{
+                            overflowX: 'auto',
+                    }}>
                         <Table>
                             <TableHead>
                                 <TableRow>
