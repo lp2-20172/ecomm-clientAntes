@@ -1,11 +1,18 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
+//import PropTypes from 'prop-types'
+import { CardContent } from 'material-ui/Card';
+import Typography from 'material-ui/Typography'
 
 class Header extends Component {
     render() {
         return (
-            <div className="Footer">
-                <h1>Hello, {this.props.title}</h1>
-            </div>
+            <CardContent>
+                <Typography type="headline">
+                    Hello, {this.props.title}
+                </Typography>
+
+
+            </CardContent>
         );
     }
 }

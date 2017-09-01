@@ -1,5 +1,12 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+import Card, { CardHeader, CardContent } from 'material-ui/Card'
+import Avatar from 'material-ui/Avatar'
+import Typography from 'material-ui/Typography'
+import TextField from 'material-ui/TextField';
+import Table, { TableBody, TableCell, TableHead, TableRow } from 'material-ui/Table';
+import Paper from 'material-ui/Paper';
+
 import { getList } from '../actions/userAction'
 import { connect } from 'react-redux'
 
@@ -20,35 +27,54 @@ class User extends Component {
 
         return (
 
-            <div >
-                q={this.props.q}
-                <br />
-                <h2>User List</h2>
-                <input type="text" onChange={this.change} />
-                <br />
-                <table>
-                    <thead>
-                        <tr>
-                            <th>#</th>
-                            <th>Nombre</th>
-                            <th>Email</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {list.map((d, index) =>
-                            <tr key={index}>
-                                <td>{index + 1}</td>
-                                <td>{d.name}</td>
-                                <td>{d.email}</td>
-                            </tr>
-                        )}
-                    </tbody>
-                    <tfoot>
+            <Card>
+                <CardHeader
+                    avatar={
+                        <Avatar aria-label="Recipe" >
+                            R
+                            </Avatar>
+                    }
+                    title="User List"
+                    subheader="Users list"
+                />
 
-                    </tfoot>
-                </table>
+                <CardContent>
+                    <Typography component="p">
+                        q={this.props.q}
+                    </Typography>
 
-            </div>
+                    <TextField
+                        id="search"
+                        label="Search"
+                        value={this.props.q}
+                        onChange={this.change}
+                        margin="normal"
+                    />
+
+                    <Paper>
+                        <Table>
+                            <TableHead>
+                                <TableRow>
+                                    <TableCell>#</TableCell>
+                                    <TableCell >Nombre</TableCell>
+                                    <TableCell >Email</TableCell>
+                                </TableRow>
+                            </TableHead>
+
+                            <TableBody>
+                                {list.map((d, index) =>
+                                    <TableRow key={index}>
+                                        <TableCell numeric>{index + 1}</TableCell>
+                                        <TableCell >{d.name}</TableCell>
+                                        <TableCell >{d.email}</TableCell>
+                                    </TableRow>
+                                )}
+                            </TableBody>
+                        </Table>
+                    </Paper>
+                </CardContent>
+
+            </Card>
         );
     }
 }

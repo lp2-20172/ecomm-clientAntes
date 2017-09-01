@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+//import PropTypes from 'prop-types'
+import Card, { CardContent } from 'material-ui/Card';
+
 import Footer from './home/Footer';
 import Header from './home/Header';
 
@@ -17,13 +20,13 @@ class Home extends Component {
 
     render() {
         return (
-            <div className="Home">
+            <Card>
                 <Header title={this.state.title} />
-                <div className="Content">
+                <CardContent>
                     <input type="text" onChange={this.handleClick} />
-                </div>
+                </CardContent>
                 <Footer />
-            </div>
+            </Card>
         );
     }
 }

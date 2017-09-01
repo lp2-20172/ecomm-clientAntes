@@ -1,8 +1,18 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types'
+import { CardContent } from 'material-ui/Card';
 import { connect } from 'react-redux'
 import { removeFromCart } from '../../actions/ecommAction';
-
+import List, {
+    ListItem,
+    ListItemAvatar,
+    ListItemSecondaryAction,
+    ListItemText,
+} from 'material-ui/List';
+import Avatar from 'material-ui/Avatar';
+import IconButton from 'material-ui/IconButton';
+import Typography from 'material-ui/Typography';
+import DeleteIcon from 'material-ui-icons/Delete';
 
 class ShoppingCart extends Component {
 
@@ -12,39 +22,41 @@ class ShoppingCart extends Component {
 
         return (
 
-            <div >
+            <CardContent >
 
-                <h2>ShoppingCart</h2>
-                <br />
-                <table>
-                    <thead>
-                        <tr>
-                            <th>#</th>
-                            <th>Nombre</th>
-                            <th>price</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {cart.map((d, index) =>
-                            <tr key={index}>
-                                <td>{index+1}</td>
-                                <td>{d.name}</td>
-                                <td>{d.price} <button onClick={() => removeFromCart(d)}> x </button></td>
-                            </tr>
-                        )}
-                    </tbody>
-                    <tfoot>
-                        <tr>
-                            <td colSpan="3">
+                <Typography type="headline">
+                    ShoppingCart List
+                </Typography>
+
+                <Typography type="subheading" color="secondary" >
+                Total: ${cart.reduce((sum, product) => sum + product.price, 0)}
+            </Typography>
+                <div >
+                    <List >
+                    {cart.map((d, index) =>
+                  <ListItem button  key={index}>
+                    <ListItemAvatar>
+                      <Avatar>
+                      <img src={d.image} alt={d.name} />
+                      </Avatar>
+                    </ListItemAvatar>
+                    <ListItemText
+                      primary={d.name+" $"+d.price+"  "}
+                      
+                    />
+                    <ListItemSecondaryAction>
+                      <IconButton aria-label="Delete" onClick={() => removeFromCart(d)}>
+                        <DeleteIcon />
+                      </IconButton>
+                    </ListItemSecondaryAction>
+                  </ListItem>,
+                )}
+
+                    </List>
+                </div>
 
 
-                                Total: ${cart.reduce((sum, product) => sum + product.price, 0)}
-                            </td>
-                        </tr>
-                    </tfoot>
-                </table>
-
-            </div>
+            </CardContent>
         );
     }
 }

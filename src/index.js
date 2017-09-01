@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import MainLayout from './components/MainLayout';
 import registerServiceWorker from './registerServiceWorker';
 import {
@@ -11,11 +10,9 @@ import { Provider } from 'react-redux'
 import store from './store'
 
 import { MuiThemeProvider, createMuiTheme } from 'material-ui/styles';
-import purple from 'material-ui/colors/purple';
 import green from 'material-ui/colors/green';
 import red from 'material-ui/colors/red';
-import Button from 'material-ui/Button';
-
+import './index.css'
 const theme = createMuiTheme({
     palette: {
         type: 'dark',

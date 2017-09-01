@@ -14,7 +14,8 @@ import IconButton from 'material-ui/IconButton';
 import MenuIcon from 'material-ui-icons/Menu';
 import ChevronLeftIcon from 'material-ui-icons/ChevronLeft';
 import { mailFolderListItems, otherMailFolderListItems } from './menu/tileData';
-
+//import Paper from 'material-ui/Paper';
+//import Grid from 'material-ui/Grid';
 
 import {
     Switch,
@@ -22,6 +23,7 @@ import {
 } from 'react-router-dom'
 import routes from './routes'
 import '../App.css';
+
 
 const drawerWidth = 240;
 
@@ -157,10 +159,9 @@ class PersistentDrawer extends React.Component {
                             <List className={classes.list}>{otherMailFolderListItems}</List>
                         </div>
                     </Drawer>
-                    <main className={classNames(classes.content, this.state.open && classes.contentShift)}>
-                        <Typography type="body1" noWrap>
-                            {'You think water moves fast? You should see ice.'}
-                        </Typography>
+
+                    <div className={classNames(classes.content, this.state.open && classes.contentShift)}>
+
 
                         <Switch>
                             {routes.map((route, index) => (
@@ -174,7 +175,7 @@ class PersistentDrawer extends React.Component {
                             <Route component={NoMatch} />
                         </Switch>
 
-                    </main>
+                    </div>
                 </div>
             </div>
         );
