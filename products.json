@@ -1,7 +1,16 @@
 {
   "products": [
-    { "id": 1, "name": "Hipster Ultimate", "price": 299, "image": "https://s3.amazonaws.com/makeitreal/projects/e-commerce/camiseta-1.jpg" },
-    { "id": 2, "name": "On Motion Live", "price": 99, "image": "https://s3.amazonaws.com/makeitreal/projects/e-commerce/camiseta-2.jpg" },
-    { "id": 3, "name": "Underground Max", "price": 149, "image": "https://s3.amazonaws.com/makeitreal/projects/e-commerce/camiseta-3.jpg" }
+    { "id": 1, "name": "1ra", "price": 149, "image": "http://diariodominicano.com/imagenes/6/medicamentos19.jpg","text":"jdghdgiouhdogiduhgduir"},
+    { "id": 2, "name": "2da", "price": 249, "image": "http://www.galenox.com/images/farmacos/imgmeds/18350.jpg" },
+    { "id": 3, "name": "3ra", "price": 249, "image": "https://www.galenox.com/images/farmacos/imgmeds/19286.jpg" },
+    { "id": 4, "name": "4ta", "price": 249, "image": "http://www.michaellissek.com/grafiken/tamiflu.jpg" },
+    { "id": 5, "name": "5ta", "price": 249, "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtaHCiQNl_1hAEJW5uhwp5V3J3nYe-W2o-GaKl9JRNg15_i42N" },
+    { "id": 6, "name": "6ta", "price": 249, "image": "http://www.panadol.com/content/dam/panadol/es_CB/images/allproducts/panadolantigripal/220x150%20Antigripal.PNG" },
+    { "id": 7, "name": "7ma", "price": 249, "image": "http://www.tropiboy.com/Portals/0/1/664.jpg" },
+    { "id": 8, "name": "8va", "price": 249, "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSz5Oo-ghsFC6BL3aKTUtYWvh6U4QHIC6wm1rjCOb-w2s3FPluk" },
+    { "id": 9, "name": "9na", "price": 249, "image": "https://cdn.genesis.pgsitecore.com/es-pe/-/media/Vicks_PE/Images/Products/PE/PE_TrataTos_Jarabe_S.jpg?v=1-201608160858" },
+    { "id": 10, "name": "10ma", "price": 249, "image": "http://www.sweetms.com/thumb/220x150/8/86/8862f76dd46de730.jpg" },
+    { "id": 11, "name": "11", "price": 249, "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqZq-LvclrxfMIsp34qLW9LcMSrgCWa3A-FFbOb81KJz1yM9P5V_VFWYE" },
+    { "id": 12, "name": "12", "price": 249, "image": "https://pbs.twimg.com/media/C7IuMJMX4AAFYuO.jpg" }
   ]
 }
