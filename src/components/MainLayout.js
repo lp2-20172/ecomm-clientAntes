@@ -14,6 +14,7 @@ import IconButton from 'material-ui/IconButton';
 import MenuIcon from 'material-ui-icons/Menu';
 import ChevronLeftIcon from 'material-ui-icons/ChevronLeft';
 import { mailFolderListItems, otherMailFolderListItems } from './menu/tileData';
+import Header from './home/Header';
 //import Paper from 'material-ui/Paper';
 //import Grid from 'material-ui/Grid';
 
@@ -136,7 +137,7 @@ class PersistentDrawer extends React.Component {
                                 <MenuIcon />
                             </IconButton>
                             <Typography type="title" color="inherit" noWrap>
-                                Persistent drawer
+                                <Header/>
               </Typography>
                         </Toolbar>
                     </AppBar>

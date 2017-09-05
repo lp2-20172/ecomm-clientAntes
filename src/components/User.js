@@ -31,7 +31,7 @@ class User extends Component {
                 <CardHeader
                     avatar={
                         <Avatar aria-label="Recipe" >
-                            R
+                            J&J
                             </Avatar>
                     }
                     title="User List"

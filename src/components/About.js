@@ -19,17 +19,16 @@ class About extends React.Component {
                     <CardHeader
                         avatar={
                             <Avatar aria-label="Recipe" >
-                                R
+                                J&J
                             </Avatar>
                         }
-                        title="Shrimp and Chorizo Paella"
-                        subheader="September 14, 2016"
+                        title="FARMACENTER LAB J&J"
+                        subheader="September 7 2016"
                     />
 
                     <CardContent>
                         <Typography component="p">
-                            This impressive paella is a perfect party dish and a fun meal to cook together with
-                            your guests. Add 1 cup of frozen peas along with the mussels, if you like.
+                            si vosotros quereis tener mas tendencia compartid esta publicacion
                         </Typography>
                     </CardContent>
                     <CardActions disableActionSpacing>

@@ -9,8 +9,9 @@ class Footer extends Component {
         return (
             <CardContent>
                 
+                
                 <Typography type="subheading" color="secondary">
-                Footer
+                "farmaceuticos cumpliendo una funcion de servicio"
                 </Typography>
             </CardContent>
         );

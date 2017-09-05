@@ -75,7 +75,7 @@ class TemporaryDrawer extends React.Component {
           {sideList}
         </Drawer>
 
-        HOLA
+        BIOMEDICAMENTOS START
         <Button onClick={this.handleLeftOpen}>Open Left</Button>
 
         

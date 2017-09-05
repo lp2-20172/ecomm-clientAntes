@@ -6,7 +6,7 @@ export const REMOVE_FROM_CART = 'REMOVE_FROM_CART'
 const loadProducts = () => {
   return dispatch => {
     console.log("loadProducts");
-    return axios.get("https://lp2-20172.github.io/ecomm-client/products.json")
+    return axios.get("http://localhost:3000/products.json")
       .then(response => {
         console.log(response.data);
         dispatch({ type: REPLACE_PRODUCTS, products: response.data.products })

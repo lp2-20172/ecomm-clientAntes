@@ -1,7 +1,7 @@
 {
   "products": [
-    { "id": 1, "name": "Hipster Ultimate", "price": 299, "image": "https://s3.amazonaws.com/makeitreal/projects/e-commerce/camiseta-1.jpg" },
-    { "id": 2, "name": "On Motion Live", "price": 99, "image": "https://s3.amazonaws.com/makeitreal/projects/e-commerce/camiseta-2.jpg" },
-    { "id": 3, "name": "Underground Max", "price": 149, "image": "https://s3.amazonaws.com/makeitreal/projects/e-commerce/camiseta-3.jpg" }
+    { "id": 1, "name": "romantic mod", "price": 2.50, "image": "https://thumbs.dreamstime.com/z/p%C3%ADldoras-en-forma-de-coraz%C3%B3n-rojas-del-amor-27689755.jpg" },
+    { "id": 2, "name": "pildoras formativas", "price": 5.90, "image": "http://www.aeped.es/sites/default/files/imagecache/mediana/images/continuum_pildoras_formativas_.jpg" },
+    { "id": 3, "name": "cerazete", "price": 1.49, "image": "http://sorayaginecologo.net/wp-content/uploads/2014/06/cerazette.jpg" }
   ]
 }
